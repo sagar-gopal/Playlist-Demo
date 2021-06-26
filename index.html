@@ -1,85 +1,51 @@
-
-<script src = "script.js"></script>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    <script src = "script.js"></script>
-
-    <title>Youtube</title>
-</head>
-
-<body onload="homePage()">
-    <header>
-        <div class="header-left">
-            <i id="menu" class="material-icons">menu</i>
-            <img class="ylogo"
-          src="https://www.youtube.com/about/static/svgs/icons/brand-resources/YouTube-logo-full_color_light.svg?cache=72a5d9c"
-          alt=""
-        />
+    <title>Youtube Video Advanced Search App in Javascript</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+  <div class="container">
+      <br>
+      <h1 class="text-center">
+          Youtube Advanced Search App
+      </h1>
+      <br>
+      
+          <div class="form-group">
+            <input class="form-control" type="text" id="search" placeholder="Search" required>
+          </div>
+          
         </div>
-        <div class="header-input">
-            <input class="search-bar" type="text" placeholder="Search" />
-            <button class="search-icon" onclick="window.location.href='search.html'"><i class="material-icons">search</i></button>
-        </div>
-        <div class="header-icons">
-        <i class="material-icons display-this">search</i>
-        <i class="material-icons">videocam</i>
-        <i class="material-icons">apps</i>
-        <i class="material-icons">notifications</i>
-        <i class="material-icons display-this">account_circle</i>
-        </div>
-    </header>
-    <div class="app_page">
-             <!-- Sidebar Starts -->
-
-      <div class="sidebar">
-        <div class="sidebar__categories">
-          <div class="sidebar__category">
-            <i class="material-icons">home</i>
-            <span>Home</span>
+          <div id="buttons" class="col-6 mx-auto">
+            <button id="btn" class="btn btn-danger" onclick="searchVideo()">Search Videos</button>
+            <button id="btn" class="btn btn-danger" onclick="searchChannel()">Search channels</button>
+            <button id="btn" class="btn btn-danger" onclick="channelInfo()">Channel info</button>
+            <button id="btn" class="btn btn-danger" onclick="searchPlaylist()">Search Playlist</button>
+            
           </div>
-          <div class="sidebar__category">
-            <i class="material-icons">local_fire_department</i>
-            <span>Trending</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">subscriptions</i>
-            <span>Subcriptions</span>
-          </div>
-        </div>
-        <hr />
-        <div class="sidebar__categories">
-          <div class="sidebar__category">
-            <i class="material-icons">library_add_check</i>
-            <span>Library</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">history</i>
-            <span>History</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">play_arrow</i>
-            <span>Your Videos</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">watch_later</i>
-            <span>Watch Later</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">thumb_up</i>
-            <span>Liked Videos</span>
-          </div>
-        </div>
-        <hr />
+      
     </div>
-        <div class = "recommended">
-
-        </div>
+        <recommended class = "recommended">   
+        </recommended>
 
     </div>
-    
-
+      <table style="display: none;" id="table" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Thumbnail</th>
+            <th>Visit Channel</th>
+          </tr>
+        </thead>
+        <tbody id="results">
+        </tbody>
+      </table>
+      
+  </div>
 </body>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+ <script src="script.js"></script>
